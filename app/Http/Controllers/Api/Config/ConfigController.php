@@ -11,8 +11,6 @@ class ConfigController extends Controller
     public function getFields()
     {
         $data['genders'] = config('enums.genders');
-        $data['occasions'] = config('enums.occasions');
-        $data['relations'] = config('enums.relations');
         $data['categories'] = $this->getCategories();
 
         return $this->json(null, $data);
